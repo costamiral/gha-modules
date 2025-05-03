@@ -1,0 +1,15 @@
+name: CI-Precheck
+inputs:
+  target-branch:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run validation binary
+      run: |
+        chmod +x ${{ github.action_path }}/tools/git-tool/bin/git
+        ${{ github.action_path }}/tools/git-tool/bin/git
+      shell: bash
+      env:
+        TARGET_BRANCH: ${{ inputs.target-branch }}
