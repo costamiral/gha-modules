@@ -8,6 +8,7 @@ runs:
   steps:
     - name: Run validation binary
       run: |
+        run: echo "TARGET_BRANCH is: $TARGET_BRANCH"
         chmod +x ${{ github.action_path }}/bin/git
         ${{ github.action_path }}/bin/git
       shell: bash
