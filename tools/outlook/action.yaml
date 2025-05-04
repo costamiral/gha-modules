@@ -1,27 +1,30 @@
 name: Notification
 description: ""
-inputs:
-  WORKFLOW_INIT:
-    description: ""
-    required: true
-  CI_PRECHECK_STATUS:
-    description: ""
-    required: true
-  CODE_ANALYSIS_STATUS:
-    description: ""
-    required: true
-  PULL_REQUEST_STATUS:
-    description: ""
-    required: true
-  CI_PRECHECK_MESSAGE:
-    description: ""
-    required: true
-  CODE_ANALYSIS_MESSAGE:
-    description: ""
-    required: true
-  PULL_REQUEST_MESSAGE:
-    description: ""
-    required: true
+# inputs:
+#   WORKFLOW_INIT:
+#     description: ""
+#     required: true
+#   BASE_BRANCH:
+#     description: ""
+#     required: true
+#   CI_PRECHECK_STATUS:
+#     description: ""
+#     required: true
+#   CODE_ANALYSIS_STATUS:
+#     description: ""
+#     required: true
+#   PULL_REQUEST_STATUS:
+#     description: ""
+#     required: true
+#   CI_PRECHECK_MESSAGE:
+#     description: ""
+#     required: true
+#   CODE_ANALYSIS_MESSAGE:
+#     description: ""
+#     required: true
+#   PULL_REQUEST_MESSAGE:
+#     description: ""
+#     required: true
 
 outputs:
   status:
@@ -37,11 +40,11 @@ runs:
         chmod +x ${{ github.action_path }}/bin/outlook
         ${{ github.action_path }}/bin/outlook
       shell: bash
-      env:
-        WORKFLOW_INIT: ${{ inputs.WORKFLOW_INIT }}
-        CI_PRECHECK_STATUS: ${{ inputs.CI_PRECHECK_STATUS }}
-        CODE_ANALYSIS_STATUS: ${{ inputs.CODE_ANALYSIS_STATUS }}
-        PULL_REQUEST_STATUS: ${{ inputs.PULL_REQUEST_STATUS }}
-        CI_PRECHECK_MESSAGE: ${{ inputs.CI_PRECHECK_MESSAGE }}
-        CODE_ANALYSIS_MESSAGE: ${{ inputs.CODE_ANALYSIS_MESSAGE }}
-        PULL_REQUEST_MESSAGE: ${{ inputs.PULL_REQUEST_MESSAGE }}
+      # env:
+      #   WORKFLOW_INIT: ${{ inputs.WORKFLOW_INIT }}
+      #   CI_PRECHECK_STATUS: ${{ inputs.CI_PRECHECK_STATUS }}
+      #   CODE_ANALYSIS_STATUS: ${{ inputs.CODE_ANALYSIS_STATUS }}
+      #   PULL_REQUEST_STATUS: ${{ inputs.PULL_REQUEST_STATUS }}
+      #   CI_PRECHECK_MESSAGE: ${{ inputs.CI_PRECHECK_MESSAGE }}
+      #   CODE_ANALYSIS_MESSAGE: ${{ inputs.CODE_ANALYSIS_MESSAGE }}
+      #   PULL_REQUEST_MESSAGE: ${{ inputs.PULL_REQUEST_MESSAGE }}
