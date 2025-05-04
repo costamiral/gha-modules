@@ -1,9 +1,5 @@
 name: Code Analysis
 description: ""
-inputs:
-  target-branch:
-    description: ""
-    required: true
 
 outputs:
   status:
