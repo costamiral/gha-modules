@@ -1,6 +1,9 @@
 name: Notification
 description: ""
 inputs:
+  WORKFLOW_INIT:
+    description: ""
+    required: true
   CI_PRECHECK_STATUS:
     description: ""
     required: true

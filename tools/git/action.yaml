@@ -1,9 +1,5 @@
 name: CI-Precheck
 description: ""
-inputs:
-  target-branch:
-    description: ""
-    required: true
 
 outputs:
   status:
