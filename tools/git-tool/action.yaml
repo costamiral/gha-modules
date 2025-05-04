@@ -6,15 +6,19 @@ inputs:
 outputs:
   status:
     description: Status of the action
+    value: ${{ steps.git.outputs.status }}
   repoName:
     description: Name of the repo
+    value: ${{ steps.git.outputs.repoName }}
   shortSha:
     description: Short commit SHA
+    value: ${{ steps.git.outputs.shortSha }}
 
 runs:
   using: "composite"
   steps:
     - name: Run validation binary
+      id: git
       run: |
         chmod +x ${{ github.action_path }}/bin/git
         ${{ github.action_path }}/bin/git
