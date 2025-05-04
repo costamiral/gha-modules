@@ -5,6 +5,9 @@ outputs:
   status:
     description: Action Status
     value: ${{ steps.git.outputs.status }}
+  statusMessage:
+    description: Action Status Mesage
+    value: ${{ steps.git.outputs.statusMessage }}
   baseBranch:
     description: Base Branch
     value: ${{ steps.git.outputs.baseBranch }}

@@ -5,6 +5,9 @@ outputs:
   status:
     description: Action Status
     value: ${{ steps.kiuwan.outputs.status }}
+  statusMessage:
+    description: Action Status Mesage
+    value: ${{ steps.kiuwan.outputs.statusMessage }}
   shortCommitSHA:
     description: Commit Short SHA
     value: ${{ steps.kiuwan.outputs.shortCommitSHA }}
