@@ -1,13 +1,13 @@
 name: Notification
 description: ""
 inputs:
-  ci_precheck_status:
+  CI_PRECHECK_STATUS:
     description: ""
     required: true
-  code_analysis_status:
+  CODE_ANALYSIS_STATUS:
     description: ""
     required: true
-  pull_request_status:
+  PULL_REQUEST_STATUS:
     description: ""
     required: true
 
