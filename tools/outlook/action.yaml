@@ -28,3 +28,8 @@ runs:
         chmod +x ${{ github.action_path }}/bin/outlook
         ${{ github.action_path }}/bin/outlook
       shell: bash
+      env:
+        WORKFLOW_INIT: ${{ inputs.WORKFLOW_INIT }}
+        CI_PRECHECK_STATUS: ${{ inputs.CI_PRECHECK_STATUS }}
+        CODE_ANALYSIS_STATUS: ${{ inputs.CODE_ANALYSIS_STATUS }}
+        PULL_REQUEST_STATUS: ${{ inputs.PULL_REQUEST_STATUS }}
