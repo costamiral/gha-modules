@@ -13,6 +13,15 @@ inputs:
   PULL_REQUEST_STATUS:
     description: ""
     required: true
+  CI_PRECHECK_MESSAGE:
+    description: ""
+    required: true
+  CODE_ANALYSIS_MESSAGE:
+    description: ""
+    required: true
+  PULL_REQUEST_MESSAGE:
+    description: ""
+    required: true
 
 outputs:
   status:
@@ -33,3 +42,6 @@ runs:
         CI_PRECHECK_STATUS: ${{ inputs.CI_PRECHECK_STATUS }}
         CODE_ANALYSIS_STATUS: ${{ inputs.CODE_ANALYSIS_STATUS }}
         PULL_REQUEST_STATUS: ${{ inputs.PULL_REQUEST_STATUS }}
+        CI_PRECHECK_MESSAGE: ${{ inputs.CI_PRECHECK_MESSAGE }}
+        CODE_ANALYSIS_MESSAGE: ${{ inputs.CODE_ANALYSIS_MESSAGE }}
+        PULL_REQUEST_MESSAGE: ${{ inputs.PULL_REQUEST_MESSAGE }}
