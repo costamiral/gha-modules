@@ -3,12 +3,19 @@ inputs:
   target-branch:
     required: true
 
+outputs:
+  status:
+    description: Status of the action
+  repoName:
+    description: Name of the repo
+  shortSha:
+    description: Short commit SHA
+
 runs:
   using: "composite"
   steps:
     - name: Run validation binary
       run: |
-        echo "TARGET_BRANCH is: $TARGET_BRANCH"
         chmod +x ${{ github.action_path }}/bin/git
         ${{ github.action_path }}/bin/git
       shell: bash
