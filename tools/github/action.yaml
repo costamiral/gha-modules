@@ -1,0 +1,24 @@
+name: GitHub Pull Request
+description: ""
+inputs:
+  target-branch:
+    description: ""
+    required: true
+
+outputs:
+  status:
+    description: Action Status
+    value: ${{ steps.github.outputs.status }}
+  shortCommitSHA:
+    description: Pull Request URL
+    value: ${{ steps.github.outputs.pullRequestUrl }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run
+      id: github
+      run: |
+        chmod +x ${{ github.action_path }}/bin/github
+        ${{ github.action_path }}/bin/github
+      shell: bash

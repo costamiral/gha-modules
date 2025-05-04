@@ -1,0 +1,21 @@
+name: Notification
+description: ""
+inputs:
+  target-branch:
+    description: ""
+    required: true
+
+outputs:
+  status:
+    description: Action Status
+    value: ${{ steps.outlook.outputs.status }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run
+      id: outlook
+      run: |
+        chmod +x ${{ github.action_path }}/bin/outlook
+        ${{ github.action_path }}/bin/outlook
+      shell: bash

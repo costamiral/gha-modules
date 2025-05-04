@@ -1,0 +1,24 @@
+name: CI-Precheck
+description: ""
+inputs:
+  target-branch:
+    description: ""
+    required: true
+
+outputs:
+  status:
+    description: Action Status
+    value: ${{ steps.git.outputs.status }}
+  baseBranch:
+    description: Base Branch
+    value: ${{ steps.git.outputs.baseBranch }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run
+      id: git
+      run: |
+        chmod +x ${{ github.action_path }}/bin/git
+        ${{ github.action_path }}/bin/git
+      shell: bash
