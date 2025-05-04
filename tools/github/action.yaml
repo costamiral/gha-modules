@@ -1,12 +1,5 @@
 name: GitHub Pull Request
 description: ""
-inputs:
-  BASE_BRANCH:
-    description: ""
-    required: true
-  SHORT_COMMIT_SHA:
-    description: ""
-    required: true
 
 outputs:
   status:
