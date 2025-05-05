@@ -1,11 +1,6 @@
 name: Notification
 description: ""
 
-outputs:
-  status:
-    description: Action Status
-    value: ${{ steps.outlook.outputs.status }}
-
 runs:
   using: "composite"
   steps:

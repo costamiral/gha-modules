@@ -1,14 +1,6 @@
 name: GitHub Pull Request
 description: ""
 
-outputs:
-  status:
-    description: Action Status
-    value: ${{ steps.github.outputs.status }}
-  shortCommitSHA:
-    description: Pull Request URL
-    value: ${{ steps.github.outputs.pullRequestUrl }}
-
 runs:
   using: "composite"
   steps:
