@@ -1,0 +1,12 @@
+name: GitHub Actions Promotion Workflow
+description: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run
+      id: git
+      run: |
+        chmod +x ${{ github.action_path }}/bin/promotion_action_component
+        ${{ github.action_path }}/bin/promotion_action_component
+      shell: bash
