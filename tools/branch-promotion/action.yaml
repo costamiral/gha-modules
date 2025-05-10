@@ -7,6 +7,6 @@ runs:
     - name: Run
       id: git
       run: |
-        chmod +x ${{ github.action_path }}/bin/promotion_action_component
-        ${{ github.action_path }}/bin/promotion_action_component
+        chmod +x ${{ github.action_path }}/bin/branch_promotion_action_component
+        ${{ github.action_path }}/bin/branch_promotion_action_component
       shell: bash
